@@ -18,3 +18,4 @@ end
 
 brand = 'Input From the user'
 rate = Mobile.new(brand)
+
