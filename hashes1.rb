@@ -3,18 +3,26 @@
 # Based on the input you need to show the price of the brand which he has entered.  
 # Make use of the below code and get the results
 
-class Mobiles
+
+
+class Mobile
 
   def initialize(list)
+    @list=list
   end
-
+def brand1(x)
+  y=@list[x]
+  puts y
+  
+end
 end
 
-@mobiles = {
-  :samsung: '10,000',
-  motorola: => '15,000',
-  "apple": '60,000'
+brand ={
+  1=> '10,000',
+  2=> '15,000',
+  3=> '60,000'
 }
-
-brand = 'Input From the user'
+puts "enter value - 1 for samsung, 2 for motorolla or 3 for apple"
+q = gets.to_i 
 rate = Mobile.new(brand)
+rate.brand1(q)

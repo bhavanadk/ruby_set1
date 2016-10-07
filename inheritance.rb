@@ -7,7 +7,7 @@
 # Fix the below code such that .
 # 1. When asked for firstName it should give their son's name.
 # 2. When asked for secondName it should only give the mothers name.
-# 3. when asked for lastName it should only give the fathers name.
+# 3. when asked for lastName it should only give the mothers name.
 # 4. when asked for fullName it should give 'Bruce Martha Thomas'.
 
 
@@ -30,48 +30,29 @@
 #                        Thomas
 
 
-class Father  
+class Parent  
   def lastName  
-    puts "lastName=> Thomas"
-
+    puts 'lastName=>Thomas'  
   end  
-end  
-  # define fatherName --> father name is 'Thomas' . 
-
-
-class Mother  
-  def secondName
-    puts "secondName=> Martha"
-    
+  
+  def secondName  
+    puts 'secondName=>Martha.'  
   end
-end
-  # define motherName -> mother's name is Martha
 
- 
+end  
 
-# Class Son inherits his last name from his Father  
-class Son1 < Father 
+class Son < Parent 
   def firstName  
     puts "firstName=>Bruce"  
   end
-end
-  # define lastName --> last name should be father's name
 
-
-
-
-# Class Son is sub-Class of Mother   
-class Son2 < Mother
-  def fullName  
-    puts 'My name is Bruce Martha Thomas'  
-  end   
+  def fullName
+   puts "Bruce Martha Thomas"
+  end
 end
 
-
-a=Son1.new
-b=Son2.new
+a=Son.new
 a.firstName()
-b.secondName()
+a.secondName()
 a.lastName()
-b.fullName()
-# instantiate an object and print his firstName, secondName, lastName fullName.
+a.fullName()
