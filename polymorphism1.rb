@@ -31,9 +31,9 @@ class Lion
 end
 
 
-class Rabbit
+class Elephant
     def sound
-   puts "squeaks"
+   puts "trumph"
     end
 end
 
@@ -55,7 +55,7 @@ puts "=====Lion Sound====="
 b=Lion.new
 a.sound(b)
 puts "=====Rabbit Sound====="
-b=Rabbit.new
+b=Elephant.new
 a.sound(b)
 puts "=====Snake Sound====="
 b=Snake.new

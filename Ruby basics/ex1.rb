@@ -15,3 +15,4 @@ if c == 0
 else
 	puts "odd"
 end
+

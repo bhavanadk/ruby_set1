@@ -31,28 +31,42 @@
 
 
 class Parent  
-  def lastName  
-    puts 'lastName=>Thomas'  
+  def fatherName  
+    print 'Thomas'  
   end  
   
-  def secondName  
-    puts 'secondName=>Martha.'  
+  def motherName  
+    print 'Martha'  
   end
 
 end  
 
 class Son < Parent 
-  def firstName  
-    puts "firstName=>Bruce"  
+  def sonName  
+    print "Bruce"  
   end
-
+  def secondName
+    motherName
+  end
+  def lastName
+    fatherName
+  end
   def fullName
-   puts "Bruce Martha Thomas"
+   puts "#{sonName} #{motherName} #{fatherName}"
   end
 end
 
 a=Son.new
-a.firstName()
+puts""
+print "firstname ==>"
+a.sonName()
+puts""
+print "secondname ==>"
 a.secondName()
+puts""
+print "lastname ==>"
 a.lastName()
+puts""
+print "fullname ==>"
 a.fullName()
+
